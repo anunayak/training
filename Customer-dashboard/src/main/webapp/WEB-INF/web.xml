@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Customer-dashboard</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.jsp</location>
+  </error-page>
+  <servlet>
+    <servlet-name>s1</servlet-name>
+    <servlet-class>com.slksoft.web.controllers.ViewAllCustomersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s1</servlet-name>
+    <url-pattern>/view-all-customers</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>view-customer-details</display-name>
+    <servlet-name>view-customer-details</servlet-name>
+    <jsp-file>/view-customer-details.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>view-customer-details</servlet-name>
+    <url-pattern>/view-customer-details</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewCustomerDetails</display-name>
+    <servlet-name>ViewCustomerDetails</servlet-name>
+    <servlet-class>com.slksoft.web.controllers.ViewCustomerDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewCustomerDetails</servlet-name>
+    <url-pattern>/ViewCustomerDetails</url-pattern>
+  </servlet-mapping>
+</web-app>
